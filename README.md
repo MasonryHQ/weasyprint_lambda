@@ -40,9 +40,9 @@ sudo docker build -t weasyprint .
 - Create an instance of the image (without actually running it) just so we can copy the zip file out
 
 ```
-docker create --name weasyprint weasyprint /bin/bash
-docker cp weasyprint:/opt/weasyprint_lambda_layer.zip .
-docker rm weasyprint
+sudo docker create --name weasyprint weasyprint /bin/bash
+sudo docker cp weasyprint:/opt/weasyprint_lambda_layer.zip .
+sudo docker rm weasyprint
 ```
 
 # Getting the zip file off the server
