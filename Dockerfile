@@ -3,7 +3,7 @@ FROM lambci/lambda:build-python3.8
 # Based on https://aws.amazon.com/premiumsupport/knowledge-center/lambda-linux-binary-package/
 RUN yum install -y yum-utils rpmdevtools
 WORKDIR /tmp
-RUN yumdownloader libffi libffi-devel pixman pixman-devel cairo pango && rpmdev-extract *rpm
+RUN yumdownloader libffi libffi-devel pixman pixman-devel fontconfig fontconfig-devel cairo pango && rpmdev-extract *rpm
 
 RUN mkdir /opt/lib
 WORKDIR /opt/lib
