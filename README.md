@@ -15,10 +15,11 @@ and find the AMI name that starts with "amzn-ami-hvm."
 ssh -i ~/path/to/keypair.pem ec2-user@public.dns.for.instance
 ```
 
-- Install necessary libs:
+- Install necessary libs and start docker daemon:
 
 ```
 sudo yum install -y yum-utils rpmdevtools docker git
+sudo service docker start
 ```
 
 - Copy down this repo and open the directory
